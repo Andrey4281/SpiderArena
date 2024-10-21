@@ -19,5 +19,4 @@ class InjectPropertyObjectConfiguratorTest {
         // Проверяем, что количество жизней было корректно заинжектировано
         assertEquals(5, spider.getLives());  // Допустим, в application.properties стоит "spider.default.lives=5"
     }
-
 }
