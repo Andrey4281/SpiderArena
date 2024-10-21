@@ -9,7 +9,7 @@ import spring.deserve.it.common.InjectProperty;
 @Setter
 public abstract class AbstractSpider implements Spider {
 
-    @InjectProperty(propertyName = "spider.default.lives")
+    @InjectProperty(value = "spider.default.lives")
     private int lives;
 
     public boolean isAlive() {
