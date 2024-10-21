@@ -12,13 +12,14 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Set;
 
-public class InjectPropertyObjectConfigurator {
-    public void configure(Spider spider) throws Exception {
-        processInjectProperty(spider);
+public class InjectPropertyObjectConfigurator implements ObjectConfigurator {
+    @Override
+    public void configure(Object object) throws Exception {
+        processInjectProperty(object);
     }
 
-    private void processInjectProperty(Spider spider) throws Exception {
-        Set<Field> allFields = ReflectionUtils.getAllFields(spider.getClass(), field -> field.isAnnotationPresent(InjectProperty.class));
+    private void processInjectProperty(Object object) throws Exception {
+        Set<Field> allFields = ReflectionUtils.getAllFields(object.getClass(), field -> field.isAnnotationPresent(InjectProperty.class));
         for (Field field : allFields) {
             Annotation[] annotations = field.getAnnotations();
             for (Annotation annotation : annotations) {
@@ -32,7 +33,7 @@ public class InjectPropertyObjectConfigurator {
                     String[] keyValue = propertyLine.split("=");
                     if(keyValue[0].equals(propertyName)){
                         field.setAccessible(true);
-                        field.set(spider, Integer.parseInt(keyValue[1]));
+                        field.set(object, Integer.parseInt(keyValue[1]));
                     }
                 }
 
