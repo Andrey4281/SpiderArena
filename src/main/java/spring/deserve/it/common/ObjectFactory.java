@@ -12,7 +12,7 @@ public class ObjectFactory {
     private List<? extends ObjectConfigurator> configurators;
 
     private ObjectFactory() {
-        Reflections reflections = new Reflections("spring.deserve.it.common");
+        Reflections reflections = new Reflections("");
         Set<Class<? extends ObjectConfigurator>> configuratorClasses = reflections.getSubTypesOf(ObjectConfigurator.class);
         configurators = configuratorClasses.stream()
                 .map(this::newInstance)
