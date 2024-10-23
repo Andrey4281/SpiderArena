@@ -1,7 +1,11 @@
 package spring.deserve.it.common;
 
-import spring.deserve.it.api.Spider;
+import spring.deserve.it.infra.ApplicationContext;
 
 public interface ObjectConfigurator {
-    void configure(Object object) throws Exception;
+    void configure(Object obj) throws Exception;
+
+    default void setContext(ApplicationContext context) {
+
+    }
 }

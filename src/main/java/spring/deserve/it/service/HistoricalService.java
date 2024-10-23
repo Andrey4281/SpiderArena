@@ -1,15 +1,16 @@
 package spring.deserve.it.service;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
-import spring.deserve.it.api.RPSEnum;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
+import spring.deserve.it.api.RPSEnum;
+import spring.deserve.it.common.Singleton;
 
+@Singleton
 public class HistoricalService {
 
     //@PostConstruct
