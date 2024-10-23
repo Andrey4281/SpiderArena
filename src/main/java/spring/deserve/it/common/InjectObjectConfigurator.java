@@ -30,6 +30,8 @@ public class InjectObjectConfigurator implements ObjectConfigurator {
                     && method.getParameterCount() == 1) {
                 Class<?> methodType = method.getParameterTypes()[0];
                 Object value = ObjectFactory.getInstance().createObject(methodType);
+                method.setAccessible(true);
+                method.invoke(object, value);
             }
         }
     }
