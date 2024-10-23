@@ -3,6 +3,7 @@ package spring.deserve.it.common;
 import org.reflections.ReflectionUtils;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Set;
 
 import static org.reflections.ReflectionUtils.withAnnotation;
@@ -21,5 +22,16 @@ public class InjectObjectConfigurator implements ObjectConfigurator {
             field.setAccessible(true);
             field.set(object, value);
         }
+
+        Set<Method> allMethods = ReflectionUtils.getAllMethods(clazz, withAnnotation(Inject.class));
+
+        for (Method method : allMethods) {
+            if (method.getName().startsWith("set")
+                    && method.getParameterCount() == 1) {
+                Class<?> methodType = method.getParameterTypes()[0];
+                Object value = ObjectFactory.getInstance().createObject(methodType);
+            }
+        }
     }
+
 }
