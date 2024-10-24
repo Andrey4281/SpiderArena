@@ -19,6 +19,7 @@ public class StatisticalSpider extends AbstractSpider {
     }
 
 
+    @Log({"battleId"})
     @Override
     public RPSEnum fight(Spider opponent, int battleId) {
         // Получаем общую статистику оппонента по всем боям
