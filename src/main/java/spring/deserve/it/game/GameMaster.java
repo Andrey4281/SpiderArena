@@ -1,7 +1,6 @@
 package spring.deserve.it.game;
 
 import spring.deserve.it.api.RPSEnum;
-import spring.deserve.it.api.Spider;
 
 public class GameMaster {
 
@@ -35,7 +34,7 @@ public class GameMaster {
             } else {
                 System.out.println("Ничья в раунде! Оба паука сохраняют жизни.");
             }
-            historicalService.saveHistory(battleId, HistoricalService.Move.builder()
+            historicalService.saveHistory(battleId, HistoricalServiceImpl.Move.builder()
                     .player1Id(spider1.hashCode())
                     .player1Move(move1)
                     .player2Id(spider2.hashCode())
