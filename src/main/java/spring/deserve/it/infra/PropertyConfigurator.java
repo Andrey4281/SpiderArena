@@ -4,6 +4,7 @@ import org.reflections.ReflectionUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import spring.deserve.it.game.InjectProperty;
@@ -19,6 +20,9 @@ import static org.reflections.ReflectionUtils.withAnnotation;
 
 @Component
 public class PropertyConfigurator implements ObjectConfigurator, BeanPostProcessor {
+
+    @Autowired
+    private ConfigurableListableBeanFactory factory;
 
    @Autowired
    private Environment environment;

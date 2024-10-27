@@ -8,7 +8,7 @@ import spring.deserve.it.api.RPSEnum;
 import spring.deserve.it.api.Spider;
 
 @Component
-@Scope(ConfigurableListableBeanFactory.SCOPE_PROTOTYPE)
+@Scope(ConfigurableListableBeanFactory.SCOPE_SINGLETON)
 public class StoneSpider extends AbstractSpider {
 
 
