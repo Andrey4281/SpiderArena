@@ -9,6 +9,7 @@ import spring.deserve.it.api.Spider;
 @Primary
 @Lazy
 @Component
+@PlayerQualifier(value = "Vasya")
 public class PaperSpider extends AbstractSpider {
 
     @Override

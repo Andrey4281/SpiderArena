@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import spring.deserve.it.game.GameMaster;
+import spring.deserve.it.game.GameMasterNew;
 
 
 @SpringBootApplication
@@ -18,7 +19,7 @@ public class Main {
 
 
         ConfigurableApplicationContext context = SpringApplication.run(Main.class, args);
-        context.getBean(GameMaster.class).fight();
+        context.getBean(GameMasterNew.class).fight();
 
     }
 

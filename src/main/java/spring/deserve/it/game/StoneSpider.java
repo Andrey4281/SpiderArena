@@ -9,6 +9,7 @@ import spring.deserve.it.api.Spider;
 
 @Component
 @Scope(ConfigurableListableBeanFactory.SCOPE_SINGLETON)
+@PlayerQualifier(value = "Роман")
 public class StoneSpider extends AbstractSpider {
 
 

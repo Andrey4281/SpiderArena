@@ -6,6 +6,7 @@ import spring.deserve.it.api.RPSEnum;
 import spring.deserve.it.api.Spider;
 
 @Component
+@PlayerQualifier("PETR")
 public class StatisticalSpider extends AbstractSpider {
 
 

@@ -11,6 +11,8 @@ public abstract class AbstractSpider implements Spider {
     @InjectProperty("spider.default.lives")
     private int lives;
 
+    private String owner;
+
     public boolean isAlive() {
         return lives > 0;
     }
