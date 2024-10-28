@@ -2,14 +2,12 @@ package spring.deserve.it.infra;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.springframework.stereotype.Component;
 import spring.deserve.it.api.Spider;
 
 import java.util.List;
 
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class SpiderLifeAspect {
 
     private final List<String> pattern = List.of("Paper");
