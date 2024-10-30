@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpiderArena</name>
 	<description>SpiderArena</description>
+	<packaging>pom</packaging>
 	<url/>
 	<licenses>
 		<license/>
@@ -30,8 +31,17 @@
 		<java.version>21</java.version>
 		<maven.compiler.release>21</maven.compiler.release>
 	</properties>
+	<modules>
+		<module>core</module>
+		<module>starter-spyder</module>
+		<module>game</module>
+	</modules>
 	<dependencies>
-
+<!--		<dependency>-->
+<!--			<groupId>spring.deserve.it</groupId>-->
+<!--			<artifactId>core</artifactId>-->
+<!--			<version>0.0.1-SNAPSHOT</version>-->
+<!--		</dependency>-->
 		<!-- Spring AOP -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -70,6 +80,14 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 		</plugins>
