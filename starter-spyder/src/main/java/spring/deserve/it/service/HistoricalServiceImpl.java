@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import spring.deserve.starter.annotainon.Benchmark;
 import spring.deserve.starter.annotainon.Log;
 import spring.deserve.starter.annotainon.Singleton;
 import spring.deserve.starter.spider.RPSEnum;
@@ -75,6 +77,7 @@ public class HistoricalServiceImpl implements HistoricalService {
         lifetimeStatistics.computeIfAbsent(move.getPlayer2Id(), id -> new SpiderStatistics()).addMove(move.getPlayer2Move());
     }
 
+    @Benchmark
     // Получение статистики паука по его ID
     @Override
     public SpiderStatistics getSpiderStatistics(int spiderId) {
