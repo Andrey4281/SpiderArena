@@ -77,7 +77,6 @@ public class HistoricalServiceImpl implements HistoricalService {
         lifetimeStatistics.computeIfAbsent(move.getPlayer2Id(), id -> new SpiderStatistics()).addMove(move.getPlayer2Move());
     }
 
-    @Benchmark
     // Получение статистики паука по его ID
     @Override
     public SpiderStatistics getSpiderStatistics(int spiderId) {

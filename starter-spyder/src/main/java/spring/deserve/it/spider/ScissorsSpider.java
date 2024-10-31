@@ -8,8 +8,8 @@ import spring.deserve.starter.spider.Spider;
 
 @Component
 //@Scope(scopeName = "prototype")
-@PlayerQualifier("Kirill")
-public class ScissorsSpider extends AbstractSpider {
+@PlayerQualifier("Kirill2")
+public class ScissorsSpider extends AbstractSpider implements Spider {
     @Override
     public RPSEnum fight(Spider opponent, int battleId) {
         return  RPSEnum.SCISSORS;

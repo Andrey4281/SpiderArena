@@ -8,8 +8,8 @@ import spring.deserve.starter.spider.Spider;
 
 
 @Component
-@PlayerQualifier("Kirill")
-public class PaperSpider extends AbstractSpider {
+@PlayerQualifier("Kirill1")
+public class PaperSpider extends AbstractSpider implements Spider {
 
     @Override
     public RPSEnum fight(Spider opponent, int battleId) {

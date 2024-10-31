@@ -6,15 +6,19 @@ import spring.deserve.it.service.HistoricalServiceImpl;
 import spring.deserve.it.spider.StatisticalSpider;
 import spring.deserve.it.spider.StoneSpider;
 import spring.deserve.starter.annotainon.Inject;
+import spring.deserve.starter.annotainon.PlayerQualifier;
 import spring.deserve.starter.spider.RPSEnum;
+import spring.deserve.starter.spider.Spider;
 
 @Component
 public class GameMaster {
 
     @Inject
-    private StoneSpider spider1 ;
+    @PlayerQualifier("Kirill")
+    private Spider spider1 ;
     @Inject
-    private StatisticalSpider spider2 ;
+    @PlayerQualifier("Albina")
+    private Spider spider2 ;
 
     @Inject
     private MySyngletone mySyngletone;

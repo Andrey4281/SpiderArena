@@ -4,6 +4,7 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 import spring.deserve.it.service.HistoricalService;
 import spring.deserve.it.service.HistoricalServiceImpl;
+import spring.deserve.starter.annotainon.Benchmark;
 import spring.deserve.starter.annotainon.Inject;
 import spring.deserve.starter.annotainon.PlayerQualifier;
 import spring.deserve.starter.spider.AbstractSpider;
@@ -12,7 +13,7 @@ import spring.deserve.starter.spider.Spider;
 
 @Component
 @PlayerQualifier("Albina")
-public class StatisticalSpider extends AbstractSpider {
+public class StatisticalSpider extends AbstractSpider implements Spider {
 
 
     @Inject
