@@ -17,6 +17,9 @@ public class GameMaster {
     private StatisticalSpider spider2 ;
 
     @Inject
+    private MySyngletone mySyngletone;
+
+    @Inject
     private HistoricalService historicalService;
     private int battleId;
 
